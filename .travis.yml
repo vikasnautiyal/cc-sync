@@ -1,9 +1,10 @@
 install: skip
 script:
+  - echo $TRAVIS_BRANCH
   - git branch
   - git status
   - git checkout -
   - git remote add awscodecommit "https://$CC_USERNAME:$CC_PWD@$CC_REPO_URL"
   - git remote show awscodecommit
-  - git push awscodecommit --mirror
+  - git push awscodecommit
   - echo "Pushed to AWS CodeCommit."
