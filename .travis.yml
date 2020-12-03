@@ -1,7 +1,8 @@
 install: skip
 script:
-  - git status
   - git branch
-  - git log -10
-  - cat branch-info.txt
-
+  - git status
+  - git remote add awscodecommit "https://$CC_USERNAME:$CC_PWD@$CC_REPO_URL"
+  - git remote show awscodecommit
+  - git push awscodecommit --mirror
+  - echo "Pushed to AWS CodeCommit."
