@@ -1,6 +1,5 @@
 install: skip
 script:
-  - echo "Re-attach HEAD to branch: $TRAVIS_BRANCH."
-  - git checkout $TRAVIS_BRANCH
+  - echo "Re-attach HEAD to branch - $TRAVIS_BRANCH"
   - git remote add awscodecommit "https://$CC_USERNAME:$CC_PWD@$CC_REPO_URL"
   - git checkout $TRAVIS_BRANCH && git push awscodecommit $TRAVIS_BRANCH
