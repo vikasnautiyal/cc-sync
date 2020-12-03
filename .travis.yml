@@ -1,0 +1,7 @@
+install: skip
+script:
+  - git status
+  - git branch
+  - git log -10
+  - cat branch-info.txt
+
